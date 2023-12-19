@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display</title>
+    <style>
+        /* 
+        display : 요소가 화면에 보이는 방식을 지정
+
+        (1) block
+        - 한 줄 전체 영역 차지
+        - width, height 설정 가능
+
+        (2) inline
+        - 컨텐츠만큼 영역 차지
+        - width, height 설정 불가
+
+        (3) inline-block
+        - inline 특징 + block 특징
+        - block 특징 : width, height 설정 가능
+        - inline 특징 : width, height 미설정 시,
+                        컨텐츠만큼 영역 차지
+        
+        (4) none
+        - 화면에 보이지 않게 지정
+        */
+
+        p, span{
+            width: 200px;
+            height: 200px;
+        }
+        p{
+            background-color: lightblue;
+            display: inline;
+        }
+        span{
+            background-color: lightpink;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <p>p태그입니다.</p>
+    <p>p태그입니다.</p>
+    <p>p태그입니다.</p>
+
+    <span>span태그입니다.</span>
+    <span>span태그입니다.</span>
+    <span>span태그입니다.</span>
+</body>
+</html>

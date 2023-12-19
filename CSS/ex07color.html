@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color</title>
+    <style>
+        /* 
+        색상 단위
+        (1) 색상 이름 : HTML 컬러명을 이용해서 색상 지정
+        (2) HEX 값 : #rrggbb, 00~ff 사이의 16진수 값
+                     #ff0000 -> red, #0000ff -> blue
+        (3) RGB 값 : rgb(red, green, blue), 0~255 값
+                     rgb(0, 0, 0) -> black
+                     rgb(255, 255, 255) -> white
+        (4) RGBA 값 : rgba(red, green, blue, alpha)
+                      alpha -> 색상 투명도 조정, 0~1 값
+        (5) HSL 값 : hsl(색조, 채도, 명도)
+                     hue -> 0~360 (0 red, 120 green, 240 blue)
+                     saturation -> 0~100% 값
+                     lightness -> 0~100% 값
+        (6) HSLA 값 : alpha -> 색상 투명도 조절, 0~1 값
+        */
+        div{
+            width: 100px;
+            height: 100px;
+        }
+        #box1{
+            background-color: pink;
+        }
+        #box2{
+            background-color: #ffd1d1;
+        }
+        #box3{
+            background-color: rgb(0, 255, 0);
+        }
+        #box4{
+            background-color: rgba(0, 255, 0, 0.3);
+        }
+        #box5{
+            background-color: hsl(240, 100%, 50%);
+        }
+        #box6{
+            background-color: hsla(240, 100%, 50%, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <!-- #box$*6 -->
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <div id="box3"></div>
+    <div id="box4"></div>
+    <div id="box5"></div>
+    <div id="box6"></div>
+</body>
+</html>

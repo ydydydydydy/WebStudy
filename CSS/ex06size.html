@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>size</title>
+    <style>
+        /* 
+        크기 단위
+        (1) px : 화소 하나의 크기에 대응되는 단위 (고정값)
+        (2) em : 부모 요소 크기에 따른 배수 단위
+        (3) rem : HTML 문서 폰트 크기에 따른 배수 단위
+        (4) % : 백분율 단위
+        */
+
+        #pxFont{
+            font-size: 10px;
+        }
+        div{
+            font-size: 10px;
+        }
+        #emFont{
+            font-size: 1em;
+        }
+        #remFont{
+            font-size: 1rem;
+        }
+
+        .parent{
+            width: 258px;
+            height: 68px;
+            background-color: yellowgreen;
+        }
+        .child{
+            width: 50%;
+            height: 50%;
+            background-color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <p>폰트 크기 기준</p>
+    <!-- p#pxFont -->
+    <p id="pxFont">px로 조정</p>
+    <div>
+        <p id="emFont">em으로 조정</p>
+    </div>
+    <p id="remFont">rem으로 조정</p>
+
+    <!-- .parent>.child -->
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+</body>
+</html>

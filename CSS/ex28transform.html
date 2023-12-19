@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+    <style>
+        /* 
+        transform : 회전, 크기 조절, 기울이기, 이동 효과 등
+                    요소를 변형하는 속성
+        - transltae : 요소의 위치를 이동
+        - scale : 요소의 크기를 확대 또는 축소
+        - rotate : 요소를 회전
+        - skew : 요소를 기울임
+        */
+        body{
+            background-color: lightgray;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            /* transform: translate(200px, 200px); */
+            /* transform: scale(0.5); */
+            /* transform: rotate(70deg); */
+            /* transform: skew(30deg, 20deg); */
+            transform: translate(150px, 150px) scale(1.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

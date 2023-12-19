@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex practice</title>
+    <style>
+        /* 
+        (0) img-section에 예시 이미지를 background-image 속성으로 지정
+            text-section에 이름도 추가
+
+        (1) 전체 영역을 container로 지정
+            카드들을 item으로 설정
+        (2) 카드들이 전체 영역을 벗어날 때 
+            줄바꿈 될 수 있게 설정
+        (3) 카드들의 메인축 공간 배분 균일하게 설정
+
+        (4) 카드 영역을 container로 지정
+            카드 내 이미지와 텍스트가 item으로 설정
+        (5) 카드 내 이미지와 텍스트가 세로로 배치되도록 설정
+        (6) 카드 내 텍스트 가운데 정렬 배치
+        */
+        .main-container{
+            /* (1) 전체 영역을 container로 지정
+            카드들을 item으로 설정 */
+            display: flex;
+
+            /* (2) 카드들이 전체 영역을 벗어날 때 
+            줄바꿈 될 수 있게 설정 */
+            flex-wrap: wrap;
+
+            /* (3) 카드들의 메인축 공간 배분 균일하게 설정 */
+            justify-content: space-evenly;
+        }
+        .card-container{
+            background-color: lightyellow;
+            margin-bottom: 25px;
+
+            /* (4) 카드 영역을 container로 지정
+            카드 내 이미지와 텍스트가 item으로 설정 */
+            display: flex;
+
+            /* (5) 카드 내 이미지와 텍스트가 세로로 배치되도록 설정 */
+            flex-direction: column;
+
+            /* (6) 카드 내 텍스트 가운데 정렬 배치 */
+            align-items: center;
+        }
+        .img-section{
+            width: 300px;
+            height: 300px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .img1{
+            background-image: url(https://www.baskinrobbins.co.kr/upload/product/main/fb92d70dee836652115c4f3b13175541.png);
+        }
+        .img2{
+            background-image: url(https://www.baskinrobbins.co.kr/upload/product/main/ea6608b4f72563b360da5c44c946ddc7.png);
+        }
+        .img3{
+            background-image: url(https://www.baskinrobbins.co.kr/upload/product/main/60a04a3a5d1b0119f065d12ee7797b2c.png);
+        }
+        .img4{
+            background-image: url(https://www.baskinrobbins.co.kr/upload/product/main/e7cb5667c3147ddb0b31e28d1f365980.png);
+        }
+        .img5{
+            background-image: url(https://www.baskinrobbins.co.kr/upload/product/main/a6bd7bcdd6bdb56f28df7e98f051abda.png);
+        }
+        .img6{
+            background-image: url(https://www.baskinrobbins.co.kr/upload/product/main/a4b71e8b99743c93a7824331850b0a3d.png);
+        }
+        .text-section{
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- 전체 영역 -->
+    <div class="main-container">
+        <!-- 카드 하나의 영역 -->
+        <div class="card-container">
+            <!-- 사진 영역 -->
+            <div class="img-section img1"></div>
+            <!-- 이름 영역 -->
+            <div class="text-section">
+                민트 초코
+            </div>
+        </div>
+        <!-- 카드 하나의 영역 -->
+        <div class="card-container">
+            <!-- 사진 영역 -->
+            <div class="img-section img2"></div>
+            <!-- 이름 영역 -->
+            <div class="text-section">베리베리 스트로베리</div>
+        </div>
+        <!-- 카드 하나의 영역 -->
+        <div class="card-container">
+            <!-- 사진 영역 -->
+            <div class="img-section img3"></div>
+            <!-- 이름 영역 -->
+            <div class="text-section">뉴옥 치즈케이크</div>
+        </div>
+        <!-- 카드 하나의 영역 -->
+        <div class="card-container">
+            <!-- 사진 영역 -->
+            <div class="img-section img4"></div>
+            <!-- 이름 영역 -->
+            <div class="text-section">아몬드 봉봉</div>
+        </div>
+        <!-- 카드 하나의 영역 -->
+        <div class="card-container">
+            <!-- 사진 영역 -->
+            <div class="img-section img5"></div>
+            <!-- 이름 영역 -->
+            <div class="text-section">그린티</div>
+        </div>
+        <!-- 카드 하나의 영역 -->
+        <div class="card-container">
+            <!-- 사진 영역 -->
+            <div class="img-section img6"></div>
+            <!-- 이름 영역 -->
+            <div class="text-section">슈팅스타</div>
+        </div>
+    </div>
+</body>
+</html>

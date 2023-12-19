@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form tag</title>
+</head>
+<body>
+    <!-- 
+        form태그 : 웹 페이지에 입력 폼을 만들 때 사용하는 태그
+        - action : 폼 데이터 전송 url
+        - method : 폼 전송 방식 (get(기본값)/post)
+     -->
+     <form action="#">
+        <!-- 
+            input 기본
+            - placeholder : 미리보기 텍스트 지정
+            - autofocus : 자동 커서 지정
+            - maxlength : 글자 수 제한 지정
+            - value : 기본값 지정
+            - readonly : 읽기전용 지정
+         -->
+        <h3>기본 정보를 입력하세요.</h3>
+        <label for="userId">아이디</label>
+        <input type="text" autofocus id="userId"
+        placeholder="아이디를 입력하세요.">
+        <br>
+        <label>
+            비밀번호
+            <input type="password" maxlength="10"
+            placeholder="비밀번호를 입력하세요.">
+        </label>
+        <br>
+        주소
+        <input type="text" value="C강의장" readonly
+        placeholder="주소를 입력하세요.">
+
+        <br><br><br>
+
+        <!-- 
+            input 선택
+            (1) type="checkbox" : 다중 선택 가능
+            (2) type="radio" : 다중 선택 불가능
+            - name : 선택 도구 그룹화
+            - value : 선택 값 구분
+         -->
+        <h3>커리큘럼에 포함된 과목을 모두 선택하세요.</h3>
+        <label>
+            Python <input type="checkbox"
+            name="subject" value="python">
+        </label>
+        <label>
+            HTML <input type="checkbox" 
+            name="subject" value="html">
+        </label>
+        <label>
+            CSS <input type="checkbox" 
+            name="subject" value="css">
+        </label>
+        <h3>수강중인 지역을 선택하세요.</h3>
+        <label>
+            광주 <input type="radio"
+            name="campus" value="gwangju">
+        </label>
+        <label>
+            서울 <input type="radio" 
+            name="campus" value="seoul">
+        </label>
+        <label>
+            순천 <input type="radio" 
+            name="campus" value="suncheon">
+        </label>
+
+        <br><br><br>
+
+        <!-- 
+            input XXX
+            select태그 : 선택 드롭박스 공간 생성
+            option태그 : 드롭박스 안 값 생성
+            textarea태그 : 여러줄 텍스트 입력
+            - cols : 너비 지정
+            - rows : 높이 지정
+         -->
+        <h3>메일 주소를 입력하세요.</h3>
+        <input type="text">@
+        <!-- select>option*3 -->
+        <select name="userEmail" id="">
+            <option value="naver">naver.com</option>
+            <option value="daum">daum.net</option>
+            <option value="google">google.com</option>
+        </select>
+        <textarea cols="30" rows="10"></textarea>
+
+        <br><br><br>
+
+        <!-- 
+            input 기타
+         -->
+        <h3>기타 정보를 입력하세요.</h3>
+        <input type="file" name="" id="">
+        <input type="color" name="" id="">
+        <input type="number" name="" id="">
+        <input type="range" name="" id="">
+        <input type="date" name="" id="">
+
+        <br><br><br>
+        <!-- 
+            input 제출 및 초기화
+            - 작성 위치 : form태그 내부
+            - 적용 대상 : form태그 내 모든 데이터
+         -->
+        <input type="submit" value="가입하기!">
+        <input type="reset">
+     </form>
+</body>
+</html>

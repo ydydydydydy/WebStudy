@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        (1) 애니메이션 이름 지정
+        (2) 애니메이션 시간 지정 (2.5초)
+        (3) 애니메이션 스타일 지정
+            시작 스타일 => 현재 띄어둔 배경 이미지
+            나중 스타일 => 다른 배경 이미지
+        */
+        .container{
+            width: 800px;
+            height: 450px;
+            background-size: contain;
+            background-repeat: no-repeat;
+
+            animation-name: image-animation;
+            animation-duration: 2.5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        @keyframes image-animation {
+            from{
+                background-image: url(https://i.ytimg.com/vi/Yd7SzFk1tqc/maxresdefault.jpg);
+            }
+            to{
+                background-image: url(https://i.ytimg.com/vi/lmJPeFW75qQ/maxresdefault.jpg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>img tag</title>
+</head>
+<body>
+    <!-- 
+        img태그 : 웹 페이지에서 이미지를 띄우는 태그
+        - src : 이미지 경로 지정
+        - alt : 사용자에게 이미지를 설명
+                (네트워크 오류, 컨텐츠 차단 등
+                이미지를 불러올 수 없을 때)
+     -->
+    <h3>맛있는 음식들 😝</h3>
+     <!-- 
+        상대경로 : 특정 위치를 기준으로 파일을 가지고 오는 경로
+        - 현재 위치 기준 : ./ or 생략
+        - 상위 폴더 기준 : ../
+        - 루트 기준 : /
+      -->
+    <img src="img1.jpg" 
+    alt="" width="400px">
+    <img src="../../HTML/img/img2.jpg" 
+    alt="" width="400px">
+    <img src="/HTML/img/img1.jpg" 
+    alt="" width="400px">
+    <!-- 
+        절대경로 : 페이지나 파일이 가지고 있는 고유한 경로
+        ** 이미지 오른쪽 마우스 > 이미지 주소 복사
+     -->
+     <img src="https://mblogthumb-phinf.pstatic.net/MjAxODExMjRfNjUg/MDAxNTQzMDQ4OTgzNjg1.CUP0PVuCKPAEFFVVHsVCJvz_F_hNi0qLVfSdXuqteiwg.Jmm1_QXIcRFPKXwBVOMjsqAU6ZwZbcR9Ri0IQd8VUbcg.JPEG.hi2morrow/IMG_2610.jpg?type=w800" 
+     alt="크림 뚝배기 불고기" width="400px">
+</body>
+</html>

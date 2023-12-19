@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selector</title>
+    <style>
+        /* (1) 전체선택자 => *로 표시 */
+        *{
+            font-family: serif;
+        }
+
+        /* (2) 태그선택자 => 태그 이름으로 표시 */
+        li{
+            font-size: large;
+        }
+
+        /* 
+        아이디 : 중복 불가능, 한 문서 한 번만
+        클래스 : 중복 가능, 재사용성 뛰어남
+        */
+
+        /* (3) 아이디선택자 => #아이디로 표시 */
+        #myClass{
+            background-color: lightpink;
+        }
+
+        /* (4) 클래스선택자 => .클래스로 표시 */
+        .otherClass{
+            background-color: lightblue;
+        }
+
+        /* 
+        (mission) 사물지능, 언어지능 li 요소에 밑줄 스타일 지정
+        ** class 속성을 부여해서 사용할 것!
+           밑줄 스타일 지정은 text-decoration: underline;
+        */
+        .koreanName{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h3>스마트인재개발원 인공지능 All-in-One</h3>
+    <ul>
+        <li id="myClass" class="koreanName">Track1 사물지능</li>
+        <li class="otherClass koreanName">Track2 언어지능</li>
+        <li class="otherClass">Track3 클라우드</li>
+    </ul>
+</body>
+</html>

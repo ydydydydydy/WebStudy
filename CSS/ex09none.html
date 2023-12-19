@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>none</title>
+    <style>
+        /* 
+        display : 화면에 보이는 방식 지정
+        => none : 화면상 영역차지 X
+
+        visibility : 보이거나 보이지 않게 지정
+        => hidden : 보이지 않을 뿐, 존재하는 영역
+
+        opacity : 투명도 조절 (0~1 값)
+        */
+
+        .answer{
+            display: none;
+            /* visibility: hidden; */
+        }
+
+        /* 
+        (mission) 질문에 마우스를 올렸을 때 답변이 나타나도록 만들기
+                  글자 색깔도 다른 색으로 지정!
+                  (display, hover 활용!)
+        */
+        .question:hover+.answer{
+            display: inline;
+            color: blue;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <!-- span.question+span.anser -->
+    <span class="question">Q. 좋아하는 커피 메뉴는?</span>
+    <span class="answer">A. 아이스아메리카노</span>
+    <br><br>
+    <span class="question">Q. 좋아하는 과목은?</span>
+    <span class="answer">A. HTML/CSS</span>
+</body>
+</html>

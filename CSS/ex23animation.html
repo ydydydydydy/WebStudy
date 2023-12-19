@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        /* 
+        animation : 요소에 적용되는 스타일을 다른 스타일로
+                    부드럽게 전환시켜주는 속성
+        */
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: greenyellow;
+
+            /* ** 이름을 지정 */
+            animation-name: box-animation;
+
+            /* ** 시간을 지정 */
+            animation-duration: 1s;
+
+            /* 반복 횟수를 지정
+            infinite => 무한반복 */
+            animation-iteration-count: 5;
+
+            /* 진행 방향을 지정
+            alternate => 왕복 */
+            animation-direction: alternate-reverse;
+
+            /* 지연 시간 지정 */
+            animation-delay: 1.5s;
+
+            /* 수치 함수 지정 */
+            animation-timing-function: cubic-bezier(1, 0.43, 0, 0.52);
+        }
+
+        /* ** 세부 스타일 지정 */
+        @keyframes box-animation {
+            from{
+                margin-top: 200px;
+                border-radius: 50%;
+            }
+            to{
+                margin-left: 200px;
+                background-color: salmon;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

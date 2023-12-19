@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button practice</title>
+    <style>
+        /* 
+        (1) 버튼의 테두리 생성 => class="outer"
+            너비 - 300px, 높이 - 100px
+            테두리 - 3px/직선/검은색
+        (2) 버튼 안 배경 생성 => class="inner"
+            높이 - 100%
+            너비 - 0% -> 마우스 올릴 시 100%
+            ** (Hint) 너비가 0%인 요소에는 마우스를 올릴 수 없겠죠? 😎
+        (3) 버튼 위 글자 생성 => class="text"
+            크기 - 3em, 굵기 - bold
+        */
+        .outer{
+            width: 300px;
+            height: 100px;
+            border: 3px solid black;
+        }
+        .inner{
+            height: 100%;
+            width: 0%;
+            background-color: lightpink;
+            transition-duration: 0.5s;
+        }
+        .outer:hover>.inner{
+            width: 100%;
+        }
+        .text{
+            font-size: 3em;
+            font-weight: bold;
+
+            width: 100%;
+            height: 100%;
+
+            /* 확인을 위한 배경색 추가 -> 완성 후 삭제~ */
+            /* background-color: aqua; */
+
+            /* (3-1) outer 안으로 배치 */
+            position: relative;
+            bottom: 100px;
+
+            /* (3-2) 글씨 한가운데로 정렬 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner"></div>
+        <div class="text">BUTTON</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <style>
+        /* 
+        flex : 아이템 간 공간 배분 및 정렬을 지정
+        - container : flex 영향을 받는 전체 공간
+        - item : 설정된 속성에 따라 배치되는 것
+        - 메인축(main-axis) : 아이템이 배치되는 축의 방향
+        - 교차축(cross-axis) : 메인축과 수직이 되는 방향
+        */
+        .container{
+            background-color: beige;
+            
+            /* 
+            div container를
+            flex 영향을 받는 전체 공간으로 만들어주기
+            */
+            display: flex;
+
+            /* flex-direction: row; */
+            /* 
+            flex-direction : 아이템이 배치되는 축(메인축)의 방향을 결정하는 속성
+            => row(기본값, 가로), row-reverse(가로 역순), 
+               column(세로), column-reverse(세로 역순)
+            */
+
+            flex-wrap: wrap;
+            /* 
+            flex-wrap : 아이템들의 줄바꿈을 결정하는 속성
+            => nowrap(기본값, 줄바꿈X), wrap(줄바꿈O), wrap-reverse(줄바꿈O, 역순)
+            */
+
+            justify-content: space-evenly;
+            /* 
+            justify-content : 아이템의 메인축 방향 정렬 지정
+            => flex-start(기본값, 시작점 정렬), flex-end(끝점 정렬), center(가운데 정렬),
+               space-around : 아이템 둘레(좌우) 균일한 여백
+               space-between : 아이템 사이 균일한 여백 (양 끝 여백X)
+               space-evenly : 아이템 사이 + 양 끝 균일한 여백
+            algin-items : 아이템의 수직축 방향 정렬 지정
+            */
+        }
+        .item{
+            background-color: lightgray;
+            width: 200px;
+            height: 200px;
+            font-size: 3rem;
+            font-weight: bold;
+            border: 1px solid black;
+
+            /* 
+            div item을
+            flex 영향을 받는 전체 공간으로 만들어주기
+            */
+            display: flex;
+
+            /* 메인축 방향 아이템 가운데 정렬 */
+            justify-content: center;
+
+            /* 수직축 방향 아이템 가운데 정렬 */
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- .container>.item{box$}*6 -->
+    <div class="container">
+        <div class="item">box1</div>
+        <div class="item">box2</div>
+        <div class="item">box3</div>
+        <div class="item">box4</div>
+        <div class="item">box5</div>
+        <div class="item">box6</div>
+    </div>
+</body>
+</html>

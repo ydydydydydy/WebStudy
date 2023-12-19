@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+    <style>
+        /* 
+        transition : 요소에 적용되는 속성 값이 변할 때
+                     일정 시간에 걸쳐 일어나도록 설정
+                     hover, active와 함께 사용!
+        => 요소에 직접 적용 : 마우스 올릴 때/내릴 때 적용 O
+        => 이벤트에 적용 : 마우스 올릴 때 적용 O, 내릴 때 적용 X
+        */
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            transition-duration: 2s;
+            transition-property: background-color;
+        }
+
+        .box:hover{
+            background-color: lightpink;
+            border-radius: 50%;
+            /* transition-duration: 2s; */
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

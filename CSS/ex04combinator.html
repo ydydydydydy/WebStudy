@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>combinator selector</title>
+    <style>
+        /* 
+        계층선택자 : 특정 위치의 요소를 계층적 구조로 선택
+        (1) 자손선택자 => A B (띄어쓰기)
+        (2) 자식선택자 => A>B
+        (3) 근접후행선택자 => A+B
+        (4) 후행선택자 => A~B
+        (A를 기준으로 B를 선택)
+        */
+
+        /* div 기준, span 선택 => 자손선택자 */
+        div span{
+            color: salmon;
+        }
+
+        /* div 기준, li 선택 => 자손선택자 */
+        div li{
+            color: cornflowerblue;
+        }
+
+        /* ol 기준, span 선택 => 자식선택자 */
+        ol>span{
+            color: forestgreen;
+        }
+
+        /* 첫번째 li 기준, 바로 옆의 형제 span 선택 => 근접후행선택자 */
+        .hotChicken+span{
+            color: orangered;
+        }
+
+        /* 첫번째 li 기준, 모든 형제 li 선택 => 후행선택자 */
+        .hotChicken~li{
+            color: blueviolet;
+        }
+
+        /* 그룹선택자 : 다양한 요소들을 콤마(,)로 선택 */
+        li, span{
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <strong>점심 메뉴 추천 💙</strong>
+        <ol>
+            <li class="hotChicken">핫치킨피자</li>
+            <span>(따끈따끈한)</span>
+            <li>정어리피자</li>
+            <li>콤비네이션피자</li>
+        </ol>
+        <span>피자는 파인애플이지..</span>
+    </div>
+    <span>피자 최대 몇판 가능?</span>
+</body>
+</html>
